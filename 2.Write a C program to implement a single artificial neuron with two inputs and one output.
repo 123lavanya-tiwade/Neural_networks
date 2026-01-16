@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void program2() {
+    printf("\n=== PROGRAM 2: Single Artificial Neuron ===\n");
+    float input1, input2;
+    float weight1 = 0.5, weight2 = 0.5;
+    float bias = -0.3;
+    
+    printf("Enter two inputs: ");
+    scanf("%f %f", &input1, &input2);
+    
+    float sum = (input1 * weight1) + (input2 * weight2) + bias;
+    int output = (sum >= 0) ? 1 : 0;
+    
+    printf("Neuron Output: %d\n", output);
+}
