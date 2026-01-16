@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void program9() {
+    printf("\n=== PROGRAM 9: Custom Neuron Output ===\n");
+    float input1, input2, weight1, weight2, bias;
+    
+    printf("Enter input 1: ");
+    scanf("%f", &input1);
+    printf("Enter input 2: ");
+    scanf("%f", &input2);
+    printf("Enter weight 1: ");
+    scanf("%f", &weight1);
+    printf("Enter weight 2: ");
+    scanf("%f", &weight2);
+    printf("Enter bias: ");
+    scanf("%f", &bias);
+    
+    float sum = (input1 * weight1) + (input2 * weight2) + bias;
+    int output = (sum >= 0) ? 1 : 0;
+    
+    printf("\nWeighted Sum: %.2f\n", sum);
+    printf("Neuron Output: %d\n", output);
+}
