@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void program5() {
+    printf("\n=== PROGRAM 5: Basic Perceptron ===\n");
+    float inputs[2] = {1.0, 1.0};
+    float weights[2] = {0.5, 0.5};
+    float bias = -0.7;
+    float threshold = 0.0;
+    
+    float sum = (inputs[0] * weights[0]) + (inputs[1] * weights[1]) + bias;
+    int output = (sum >= threshold) ? 1 : 0;
+    
+    printf("Sum: %.2f\n", sum);
+    printf("Perceptron Output: %d\n", output);
+}
