@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int thresholdActivation(float input, float threshold) {
+    return (input >= threshold) ? 1 : 0;
+}
+
+void program4() {
+    printf("\n=== PROGRAM 4: Threshold Activation ===\n");
+    float input = 0.7;
+    float threshold = 0.5;
+    
+    int output = thresholdActivation(input, threshold);
+    
+    printf("Input: %.2f\n", input);
+    printf("Threshold: %.2f\n", threshold);
+    printf("Output: %d\n", output);
+}
