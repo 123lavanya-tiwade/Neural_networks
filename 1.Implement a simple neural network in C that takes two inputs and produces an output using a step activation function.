@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int stepActivation(float sum) {
+    return (sum >= 0) ? 1 : 0;
+}
+
+void program1() {
+    printf("\n=== PROGRAM 1: Simple Neural Network ===\n");
+    float input1 = 0.5, input2 = 0.3;
+    float weight1 = 0.4, weight2 = 0.6;
+    float bias = -0.5;
+    
+    float sum = (input1 * weight1) + (input2 * weight2) + bias;
+    int output = stepActivation(sum);
+    
+    printf("Inputs: %.2f, %.2f\n", input1, input2);
+    printf("Weighted Sum: %.2f\n", sum);
+    printf("Output: %d\n", output);
+}
