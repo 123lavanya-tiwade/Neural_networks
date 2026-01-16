@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+void program3() {
+    printf("\n=== PROGRAM 3: Weighted Sum ===\n");
+    float input1 = 2.0, input2 = 3.0;
+    float weight1 = 0.4, weight2 = 0.6;
+    
+    float weightedSum = (input1 * weight1) + (input2 * weight2);
+    
+    printf("Input 1: %.2f, Weight 1: %.2f\n", input1, weight1);
+    printf("Input 2: %.2f, Weight 2: %.2f\n", input2, weight2);
+    printf("Weighted Sum: %.2f\n", weightedSum);
+}
