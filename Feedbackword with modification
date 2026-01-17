@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+float activation(float x) {
+    return x;
+}
+
+int main() {
+    float weight_input = 0.6;
+    float weight_feedback = 0.4;
+    float output = 0.0;
+    float input;
+    int t = 0;
+    
+    printf("Enter inputs continuously\n");
+    printf("Time\tInput\tOutput\n");
+    
+    while (1) { 
+        printf("Enter input %d: ", t);
+        
+
+        if (scanf("%f", &input) != 1) {
+            printf("Invalid input. Exiting.\n");
+            break;
+        }
+        
+        output = activation(input * weight_input + output * weight_feedback);
+        printf("%d\t%.2f\t%.2f\n", t, input, output);
+        
+        t++;
+    }
+    
+    return 0;
+}
