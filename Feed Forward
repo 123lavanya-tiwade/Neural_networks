@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <math.h>
+
+double sigmoid(double x) {
+    return 1.0 / (1.0 + exp(-x));
+}
+
+int main() {
+
+    double input[2] = {1.0, 0.5};
+
+    double weights_input_hidden[2][2] = {
+        {0.15, 0.20},
+        {0.25, 0.30}
+    };
+
+    double bias_hidden[2] = {0.35, 0.35};
+
+    double weights_hidden_output[2] = {0.40, 0.45};
+
+    double bias_output = 0.60;
+
+    double hidden[2];
+    for (int i = 0; i < 2; i++) {
+        hidden[i] = 0.0;
+        for (int j = 0; j < 2; j++) {
+            hidden[i] += input[j] * weights_input_hidden[j][i];
+        }
+        hidden[i] += bias_hidden[i];
+        hidden[i] = sigmoid(hidden[i]);
+    }
+
+    double output = 0.0;
+    for (int i = 0; i < 2; i++) {
+        output += hidden[i] * weights_hidden_output[i];
+    }
+    output += bias_output;
+    output = sigmoid(output);
+
+    printf("Output: %f\n", output);
+
+    return 0;
+}
